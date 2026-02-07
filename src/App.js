@@ -12,15 +12,15 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Say Hello to VIPIN KUMAR
+          Learn Jenkins on Udemy
         </a>
       </header>
       <p>
           Application version: 1
       </p>
-      <p>
+      <span>
         This is my first deployment
-      </p>
+      </span>
     </div>
   );
 }
