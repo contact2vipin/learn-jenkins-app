@@ -8,7 +8,14 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+
+        stage('Docker') {
+            steps {
+                sh 'docker build -t my-playwright .'
+            }
+        }
+
+        /* stage('Build') {
             agent {
                 docker {
                     image 'node:18-alpine'
@@ -128,6 +135,6 @@ pipeline {
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'Prod E2E', reportTitles: '', useWrapperFileDirectly: true])
                 }
             }
-        }
+        } */
     }
 }
